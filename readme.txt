@@ -1,4 +1,4 @@
-README.TXT
+README.TXT SET09103 10008039 FAHAD LATIF
 
 To run the web app simple login to livinux using tc@locahost 2222
 from there you will need to go into the correct directory
