@@ -1,7 +1,7 @@
 #layout{
 width:900px;
 height:680px;
-background-color:#FFFFFF;
+background-color:#000000;
 margin:auto;
 }
 body{
@@ -14,7 +14,7 @@ width:775px;
 height:123px;
 }
 .header{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, sans-serif;
 	font-size:36px;
 	font-weight:bold;
 	color:#FFFFFF;
@@ -23,7 +23,7 @@ height:123px;
 	padding-top: 40px;
 }
 .header1{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, sans-serif;
 	font-size:36px;
 	font-weight:bold;
 	color:#fdc901;
@@ -32,7 +32,7 @@ height:123px;
 	margin-top: -42px;
 }
 .header2{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, sans-serif;
 	font-size:14px;
 	font-weight:bold;
 	color:#FFFFFF;
@@ -41,7 +41,7 @@ height:123px;
 	margin-top: -23px;
 }
 .header3{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, sans-serif;
 	font-size:14px;
 	font-weight:bold;
 	color:#3987b3;
@@ -50,7 +50,7 @@ height:123px;
 	margin-top: -15px;
 }
 .header4{
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, sans-serif;
 	font-size:10px;
 	font-weight:bold;
 	color:#57a3d4;
