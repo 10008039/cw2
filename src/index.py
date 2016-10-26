@@ -7,7 +7,7 @@ def index():
 
 @app.route("/gtr/")
 def gtr():
-  return render_template('gtr.html')
+  return render_template('templates/gtr.html')
 
 @app.route("/p1")
 def p1():
