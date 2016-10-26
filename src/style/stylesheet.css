@@ -61,43 +61,4 @@ height:123px;
 	margin-top:25px;
 }
 
-#hrline{
-width:775px;
-height:5px;
-background-color:#787878;
-}
 
-
-}
-.linktxt{
-	width:140px;
-	font-size:14px;
-	font-weight:bold;
-	color:#FFFFFF;
-	margin-left:50px;
-	padding-top:25px;
-	font-family: Arial, sans-serif;
-	text-decoration:none;
-}
-#line1{
-	width:1px;
-	height:192px;
-	background-repeat:no-repeat;
-	margin-left: 510px;
-	margin-top: -194px;
-}
-#hrline1{
-width:775px;
-height:5px;
-background-color:#e99f08;
-}
-.foottxt{
-	font-family:Arial, sans-serif;
-	font-size:10px;
-	font-weight:normal;
-	color:#FFFFFF;
-	text-align:center;
-	margin-left: 0px;
-	margin-top: 20px;
-	text-decoration:none;
-	
