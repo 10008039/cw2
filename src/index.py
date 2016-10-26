@@ -23,7 +23,7 @@ def lambo():
 
 @app.route("/veyron/")
 def veyron():
-  return render_template('veyron.html')
+  return render_template('bugatti.html')
 
 @app.route("/p918/")
 def p918():
