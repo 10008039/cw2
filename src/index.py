@@ -5,9 +5,6 @@ app = Flask(__name__)
 def index():
   return render_template("index.html")
 
-
-
-
 @app.errorhandler(404)
 def page_not_found(error):
   return "Couldn’t find the page you requested.", 404
