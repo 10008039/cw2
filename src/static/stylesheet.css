@@ -8,12 +8,9 @@ body{
 margin:0 auto;
 background-color:#666666;
 }
-#Auto Sales
-{
-width:775px;
-height:123px;
-}
-.header{
+
+
+.title{
 	font-family:Arial, sans-serif;
 	font-size:36px;
 	font-weight:bold;
@@ -21,7 +18,7 @@ height:123px;
 	text-align:center;
 	
 }
-.header1{
+.title1{
 	font-family:Arial, sans-serif;
 	font-size:36px;
 	font-weight:bold;
@@ -30,7 +27,7 @@ height:123px;
 	margin-left: 150px;
 	margin-top: -42px;
 }
-.header2{
+.title2{
 	font-family:Arial, sans-serif;
 	font-size:14px;
 	font-weight:bold;
@@ -39,7 +36,7 @@ height:123px;
 	margin-left: 518px;
 	margin-top: -23px;
 }
-.header3{
+.title3{
 	font-family:Arial, sans-serif;
 	font-size:14px;
 	font-weight:bold;
@@ -48,7 +45,7 @@ height:123px;
 	margin-left: 590px;
 	margin-top: -15px;
 }
-.header4{
+.title4{
 	font-family:Arial, sans-serif;
 	font-size:10px;
 	font-weight:bold;
