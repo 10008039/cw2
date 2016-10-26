@@ -25,9 +25,9 @@ def lambo():
 def veyron():
   return render_template(‘veyron.html')
 
-@app.route(“/918/")
-def 918():
-  return render_template(‘918.html')
+@app.route(“/p918/")
+def p918():
+  return render_template(‘p918.html')
 
 
 @app.errorhandler(404)
