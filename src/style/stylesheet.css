@@ -3,7 +3,7 @@
 #layout{
 width:775px;
 height:680px;
-background-color:#000000;
+background-color:#666666;
 margin:auto;
 }
 body{
@@ -19,7 +19,7 @@ height:123px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:36px;
 	font-weight:bold;
-	color:#FFFFFF;
+	color:#666666;
 	width: 30px;
 	margin-left: 50px;
 	padding-top: 40px;
@@ -28,7 +28,7 @@ height:123px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:36px;
 	font-weight:bold;
-	color:#FFFFFF;
+	color:#666666;
 	width: 30px;
 	margin-left: 150px;
 	margin-top: -42px;
@@ -37,7 +37,7 @@ height:123px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
 	font-weight:bold;
-	color:#FFFFFF;
+	color:#666666;
 	width: 70px;
 	margin-left: 518px;
 	margin-top: -23px;
@@ -46,7 +46,7 @@ height:123px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
 	font-weight:bold;
-	color:#FFFFFF;
+	color:#666666;
 	width: 150px;
 	margin-left: 590px;
 	margin-top: -15px;
