@@ -7,27 +7,27 @@ def index():
 
 @app.route("/gtr/")
 def gtr():
-  return render_template(‘gtr.html')
+  return render_template('gtr.html')
 
-@app.route(“/p1")
+@app.route("/p1")
 def p1():
-  return render_template(‘p1.html')
+  return render_template('p1.html')
 
-@app.route(“/ferrari/")
+@app.route("/ferrari/")
 def ferrari():
-  return render_template(‘ferrari.html')
+  return render_template('ferrari.html')
 
-@app.route(“/lambo/")
+@app.route("/lambo/")
 def lambo():
-  return render_template(‘lambo.html')
+  return render_template('lambo.html')
 
-@app.route(“/veyron/")
+@app.route("/veyron/")
 def veyron():
-  return render_template(‘veyron.html')
+  return render_template('veyron.html')
 
-@app.route(“/p918/")
+@app.route("/p918/")
 def p918():
-  return render_template(‘p918.html')
+  return render_template('p918.html')
 
 
 @app.errorhandler(404)
