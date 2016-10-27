@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 @app.route("/")
@@ -11,7 +11,10 @@ def gtr():
 
 @app.route("/p1")
 def p1():
-  return render_template('p1.html')
+  start = '<img src="'
+  url = url_for('static', filename='image/p1.jpg')
+  end = '">'
+  return start+url+end, 200
 
 @app.route("/ferrari/")
 def ferrari():
