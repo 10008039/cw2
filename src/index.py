@@ -5,9 +5,9 @@ app = Flask(__name__)
 def index():
   return render_template("index.html")
 
-@app.route("/gtr/")
+@app.route('/gtr/')
 def gtr():
-  return render_template('templates/gtr.html')
+  return render_template('gtr.html')
 
 @app.route("/p1")
 def p1():
