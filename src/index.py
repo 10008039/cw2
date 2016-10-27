@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 app = Flask(__name__)
 
 @app.route("/")
@@ -16,15 +16,20 @@ def p1():
   end = '">'
   return start+url+end, 200
 
-@app.route("/ferrari/")
+@app.route("/ferrari/", methods=['GET', 'POST'])
 def ferrari():
-  return render_template('ferrari.html')
+  if request.method == 'POST':
+    print request.form
+    name = request.form['name']
+    return 'Hello %s' % name
+  else:
+    return render_template('ferrari.html')
 
 @app.route("/lambo/")
 def lambo():
   return render_template('lambo.html')
 
-@app.route("/veyron/")
+@app.route("/bugatti/")
 def veyron():
   return render_template('bugatti.html')
 
