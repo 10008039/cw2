@@ -11,10 +11,7 @@ def gtr():
 
 @app.route("/p1")
 def p1():
-  start = '<img src="'
-  url = url_for('static', filename='image/p1.jpg')
-  end = '">'
-  return start+url+end, 200
+  return render_template('p1.html')
 
 @app.route("/ferrari/", methods=['GET', 'POST'])
 def ferrari():

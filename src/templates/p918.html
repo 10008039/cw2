@@ -1,8 +1,4 @@
-
-
-
-
- <!DOCTYPE html PUBLIC >
+<!DOCTYPE html>
 <html>
 <head>
 <title> Luxury Car Sales</title>
@@ -11,44 +7,53 @@
 </head>
 <body>
 <div id="layout">
-<div id="titlebg">
-<div class="title">Luxury</div>
-<div class="title1">Car Sales</div>
-<div class="title2">WE HAVE</div>
-<div class="title3">THE BEST</div>
-</div>
-<hr id="hrline" />
-<div id="gradientbg">
-<div id="links">
-<div class="linktext"> <a href="templates/gtr.html" class="linktext">HOME</a> </div>
-<div class="hyperlink"><a href="templates/p1.html" class="hyperlink">ABOUT US</a> </div>
-<div class="hyperlink"><a href="templates/ferrari.html" class="hyperlink">SERVICES</a></div>
-<div class="hyperlink"><a href="templates/lambo.html" class="hyperlink">FOR SALE</a></div>
-<div class="hyperlink"><a href="templates/veyron.html" class="hyperlink">CONTACTS</a></div>
-<div class="hyperlink"><a href="p918.html" class="hyperlink">CONTACTS</a></div>
-</div>
-
+  <div id="titlebg">
+    <div class="title">CAR</div>
+    <div class="title1">LUXURY</div>
+    <div class="title2">WE HAVE</div>
+    <div class="title3">THE BEST CARS</div>
+  </div>
+  <hr id="hrline" />
+  <div id="gradientbg">
+    <div id="links">
+      	<div class="hyperlink"><a href="{{ url_for('index') }}" class="hyperlink">HOMEPAGE</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('p1') }}" class="hyperlink">MCLAREN</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('ferrari') }}" class="hyperlink">FERRARI</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('lambo') }}" class="hyperlink">LAMBORGHINI</a> </div>
+		<div class="hyperlink"><a href="{{ url_for('buggati') }}" class="hyperlink">BUGGATI</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('gtr') }}" class="hyperlink">NISSAN</a> </div>
+    </div>
+	
  <div id="images" >
  <img src="/static/images/9181.jpg" width="600" height="500"/>
  <img src="/static/images/9182.jpg" width="600" height="500"/>
- 
-<div id="header"></div>
-<div id="line"></div>
-<div id="ourservices">
-<div class="our">OUR SERVICES</div>
-<div id="pic1"></div>
-<div class="vs1">Vehicle Sourcing</div>
-<div class="txt">We can find the vehicle that youre looking for, however rare or limited it may be.</div>
-</div>
-<div id="line1"></div>
-<div id="aboutus">
-<div class="abt">ABOUT US</div>
-<div id="pic2"></div>
-<div class="vs2">How did it all begin</div>
-<div class="txt1">company was established in year 2000 when used cheap cars were being traded on by us and now we have expanded to what we love best, Exotic Cars</div>
-</div>
-</div>
-<hr id="hrline1" />
+	
+	  <div id="header"></div>
+    <div id="line"></div>
+    <div id="ourservices">
+      <div class="our">VEHICLE DESCRIPTION</div>
 
-<div class="foottxt">Copyright Luxury Car Sales by Fahad Latif 10008039.</div>
+      <div class="txt">As new (83 miles over 2 journeys) 2015/15 918 Spyder - UK supplied car. The car is Dark Blue Metallic with Onyx Black and Silver piping and is in absolutely stunning condition.
+
+Just been through Porsche Centre Reading to ensure everything is in tip-top condition before being put into storage. The car has a great spec including the important front-axle lift function.
+
+This is a physical car for sale by owner (not through an agent or dealer) - buy with confidence with the official Porsche warranty until July 2019.
+
+Export can easily be arranged to anywhere in the world - take full advantage of the weak pound!
+
+They say a picture is worth a thousand words - enjoy them!</div>
+    </div>
+    <div id="line1"></div>
+    <div id="aboutus">
+      <div class="abt">PRICE</div>
+      <div id="pic2"></div>
+      <div class="vs2">GBP</div>
+      <div class="txt1">1,074,000</div>
+    </div>
+  </div>
+  <hr id="hrline1" />
+  <div class="footer">@Copyright Luxury Car Sales by Fahad Latif 10008039.</div>
 </div>
+</body>
+</html>
+

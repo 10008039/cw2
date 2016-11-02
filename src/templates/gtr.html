@@ -1,12 +1,51 @@
-
-<!DOCTYPE html PUBLIC >
+<!DOCTYPE html>
 <html>
 <head>
 <title> Luxury Car Sales</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="style/stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="/static/stylesheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div>Test</div>
+<div id="layout">
+  <div id="titlebg">
+    <div class="title">CAR</div>
+    <div class="title1">LUXURY</div>
+    <div class="title2">WE HAVE</div>
+    <div class="title3">THE BEST CARS</div>
+  </div>
+  <hr id="hrline" />
+  <div id="gradientbg">
+    <div id="links">
+      	<div class="hyperlink"><a href="{{ url_for('index') }}" class="hyperlink">HOMEPAGE</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('p1') }}" class="hyperlink">MCLAREN</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('ferrari') }}" class="hyperlink">FERRARI</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('lambo') }}" class="hyperlink">LAMBORGHINI</a> </div>
+		<div class="hyperlink"><a href="{{ url_for('buggati') }}" class="hyperlink">BUGGATI</a> </div>
+		<div class="hyperlink"><a href="{{ url_for('p918') }}" class="hyperlink">PORSCHE</a> </div>
+    </div>
+	
+ <div id="images" >
+ <img src="/static/images/gtr1.jpg" width="600" height="500"/>
+ 
+ <img src="/static/images/gtr2.jpg" width="600" height="500"/>
+	
+	  <div id="header"></div>
+    <div id="line"></div>
+    <div id="ourservices">
+      <div class="our">VEHICLE DESCRIPTION</div>
+
+      <div class="txt">This Stunning MY17 Nissan GTR Recaro Edition, Spec Includes Storm White Coachwork, Heated Red And Black Recaro Sports Leather Interior, Touchscreen Satellite Navigation With Reverse Camera, Speed Camera Detection, Electric Seats, Bose Hi Fi With HDD Music Box System, Dual Zone Climate Control With Air Conditioning, 20" Alloy Wheels, DSC-Dynamic Stability Control, Electronic Stability Programme, Multi Function Steering Wheel With Audio Controls, Auto Wipers, DAB, Auto Xenon Headlamps, Nissan Vehicle Immobiliser System, USB Connection, Bluetooth, Cruise Control, Front And Rear Park Distance Control, 550bhp From The Factory, Nissan Warranty Until September 2019, VAT Qualifying (Included In The Price).</div>
+    </div>
+    <div id="line1"></div>
+    <div id="aboutus">
+      <div class="abt">PRICE</div>
+      <div id="pic2"></div>
+      <div class="vs2">GBP</div>
+      <div class="txt1">74,000</div>
+    </div>
+  </div>
+  <hr id="hrline1" />
+  <div class="footer">@Copyright Luxury Car Sales by Fahad Latif 10008039.</div>
+</div>
 </body>
 </html>

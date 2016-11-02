@@ -1,6 +1,4 @@
-  
-
-<!DOCTYPE html PUBLIC >
+<!DOCTYPE html>
 <html>
 <head>
 <title> Luxury Car Sales</title>
@@ -9,41 +7,47 @@
 </head>
 <body>
 <div id="layout">
-<div id="titlebg">
-<div class="title">Luxury</div>
-<div class="title1">Car Sales</div>
-<div class="title2">WE HAVE</div>
-<div class="title3">THE BEST</div>
-</div>
-<hr id="hrline" />
-<div id="gradientbg">
-<div id="links">
-<div class="hyperlink"> <a href="templates/gtr.html" class="hyperlink">HOME</a> </div>
-<div class="hyperlink"><a href="templates/p1.html" class="hyperlink">ABOUT US</a> </div>
-<div class="hyperlink"><a href="templates/ferrari.html" class="hyperlink">SERVICES</a></div>
-<div class="hyperlink"><a href="templates/lambo.html" class="hyperlink">FOR SALE</a></div>
-<div class="hyperlink"><a href="templates/veyron.html" class="hyperlink">CONTACTS</a></div>
-<div class="hyperlink"><a href="templates/p918.html" class="hyperlink">CONTACTS</a></div>
-</div>
-
+  <div id="titlebg">
+    <div class="title">CAR</div>
+    <div class="title1">LUXURY</div>
+    <div class="title2">WE HAVE</div>
+    <div class="title3">THE BEST CARS</div>
+  </div>
+  <hr id="hrline" />
+  <div id="gradientbg">
+    <div id="links">
+      	<div class="hyperlink"><a href="{{ url_for('index') }}" class="hyperlink">HOMEPAGE</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('gtr') }}" class="hyperlink">NISSAN</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('p1') }}" class="hyperlink">MCLAREN</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('ferrari') }}" class="hyperlink">FERRARI</a> </div>
+      	<div class="hyperlink"><a href="{{ url_for('lambo') }}" class="hyperlink">LAMBORGHINI</a> </div>
+		<div class="hyperlink"><a href="{{ url_for('p918') }}" class="hyperlink">PORSCHE</a> </div>
+    </div>
+	
  <div id="images" >
  <img src="/static/images/img/arrow.jpg" width="600" height="500"/>
  
  <img src="/static/images/bug2.jpg" width="600" height="500"/>
-  
-<div id="header"></div>
-<div id="line"></div>
-<div id="ourservices">
-<div class="our">OUR SERVICES</div>
-<div id="pic1"></div>
-<div class="vs1">Vehicle Sourcing</div>
-<div class="txt">We can find the vehicle that youre looking for, however rare or limited it may be.</div>
+	
+	  <div id="header"></div>
+    <div id="line"></div>
+    <div id="ourservices">
+      <div class="our">VEHICLE DESCRIPTION</div>
+
+      <div class="txt">Full Service History, Delivery Available, Dealer/Manufacturer Warranty
+
+This Grand Sport is one of only 58 ever produced and the only to be finished in Bianco Lamborghini over a Cognac full leather interior. It was originally a Bugatti factory demonstrator car, touring major events in the United States, and is one of only 11 examples made to U.S. specification. The car has just 4,900 miles from new, has been recently serviced and fitted with new tyres, and its factory warranty has been extended until the end of August 2017. It comes complete with its original handbook, spare key, speed key, soft-top and stand, car cover, car charger and a very thorough history file, including all service inspection reports by Bugatti-authorised dealers. *Please note that this car is located in America and titled in that country.*</div>
+    </div>
+    <div id="line1"></div>
+    <div id="aboutus">
+      <div class="abt">PRICE</div>
+      <div id="pic2"></div>
+      <div class="vs2">GBP</div>
+      <div class="txt1">1,050,000</div>
+    </div>
+  </div>
+  <hr id="hrline1" />
+  <div class="footer">@Copyright Luxury Car Sales by Fahad Latif 10008039.</div>
 </div>
-<div id="line1"></div>
-<div id="aboutus">
-<div class="abt">ABOUT US</div>
-<div id="pic2"></div>
-<div class="vs2">How did it all begin</div>
-<div class="txt1">company was established in year 2000 when used cheap cars were being traded on by us and now we have expanded to what we love best, Exotic Cars</div>
-</div>
-</div>
+</body>
+</html>
