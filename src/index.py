@@ -30,8 +30,8 @@ def lambo():
   return render_template('lambo.html')
 
 @app.route("/bugatti/")
-def veyron():
-  return render_template('bugatti.html')
+def buggati():
+  return render_template('buggati.html')
 
 @app.route("/p918/")
 def p918():
