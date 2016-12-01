@@ -1,5 +1,7 @@
-from flask import Flask, render_template, url_for, request
+import ConfigParser
+from flask import Flask, render_template, url_for, request, redirect, flash, session
 app = Flask(__name__)
+
 
 @app.route("/account/", methods=['POST','GET'])
 def account():
