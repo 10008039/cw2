@@ -1,8 +1,8 @@
 import ConfigParser
 from flask import Flask, render_template, url_for, request, redirect, flash, session
 app = Flask(__name__)
-
-
+app.secret_key =  'supersecret'
+		
 @app.route("/account/", methods=['POST','GET'])
 def account():
 	if request.method == 'POST':
@@ -12,7 +12,7 @@ def account():
 	else:
 		page ='''
 		<html><body>
-		 <form action="" method="post" name="form">
+		 <form action="index.html" method="post" name="form">
 			<label for="name">Name:</label>
 			<input type="text" name="name" id"name"/>
 			<input type="submit" name="submit" id="submit"/>
@@ -20,6 +20,7 @@ def account():
 		</body><html>'''
 		
 		return page
+
 
 @app.route("/")
 def index():
@@ -61,3 +62,35 @@ def page_not_found(error):
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
+	
+	
+	
+@app.route('/config/')
+def config():
+	str = []
+	str.append('debug:'+app.config['DEBUG'])
+	str.append('port:'+app.config['port'])
+	str.append('url:'+app.config['url'])
+	str.append('ip_adress:'+app.config['ip_address'])
+	return '\t'.join(str)
+	
+def init(app):
+	config = ConfigParser.ConfigParser()
+	try:
+		config_location = "etc/defaults.cfg"
+		config.read(config_location)
+
+		app.config['DEBUG'] = config.get("config", "debug")
+		app.config['ip_address'] = config.get("config", "ip_address")
+		
+		app.config['port'] = config.get("config", "port")
+		app.config['url'] = config.get("config", "url")
+	except:
+		print "Could not read configs from: ", config_location
+
+if __name__ == '__main__':
+	init(app)
+	app.run(
+	host=app.config['ip_address'],
+	port=int(app.config['port']))
+
