@@ -34,7 +34,7 @@ def logout():
 @app.route("/secret/")
 @requires_login
 def secret():
-	return "Secret Page"
+	return render_template('login.html')
 
 @app.route("/", methods=['GET', 'POST'])
 def root():
