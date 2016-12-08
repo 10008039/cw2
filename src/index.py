@@ -67,21 +67,13 @@ def read():
 		pass
 	return "No session variable set for 'name' key"
 
+
 @app.route('/session/remove/')
 def remove():
 	session.pop('name', None)
 	return "Removed key 'name' from session"
   
-@app.route('/login/')
-@app.route('/login/<message>')
-def login (message=None):
-	if (message != None):
-		flash(message)
-	else:
-		flash(u'A default message')
-	return redirect(url_for('index'))
-
-
+  
 @app.route('/gtr/')
 def gtr():
   return render_template('gtr.html')
@@ -118,8 +110,7 @@ def page_not_found(error):
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
-	
-	
+
 	
 @app.route('/config/')
 def config():
