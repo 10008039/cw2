@@ -1,30 +1,86 @@
 import ConfigParser
-from flask import Flask, render_template, url_for, request, redirect, flash, session
+import sqlite3
+import bcrypt
+from functools import wraps
+from flask import Flask, render_template, url_for, request, redirect, flash, session, g
 app = Flask(__name__)
+db_location = 'var/test.db'
 app.secret_key =  'supersecret'
 		
-@app.route("/account/", methods=['POST','GET'])
-def account():
+valid_email = 'person@napier.ac.uk'
+valid_pwhash = bcrypt.hashpw('secretpass', bcrypt.gensalt())
+
+def check_auth(email, password):
+	if(email == valid_email and
+		valid_pwhash == bcrypt.hashpw(password.encode('utf-8'),
+	valid_pwhash)):
+		return True
+	return False
+
+def requires_login(f):
+	@wraps(f)
+	def decorated(*args, **kwargs):
+		status = session.get('logged_in', False)
+		if not status:
+			return redirect(url_for('.root'))
+		return f(*args, **kwargs)
+	return decorated
+
+@app.route('/logout/')
+def logout():
+	session['logged_in'] = False
+	return redirect(url_for('.root'))
+
+@app.route("/secret/")
+@requires_login
+def secret():
+	return "Secret Page"
+
+@app.route("/", methods=['GET', 'POST'])
+def root():
 	if request.method == 'POST':
-		print request.form
-		name = request.form['name']
-		return "Welcome %s" % name
-	else:
-		page ='''
-		<html><body>
-		 <form action="index.html" method="post" name="form">
-			<label for="name">Name:</label>
-			<input type="text" name="name" id"name"/>
-			<input type="submit" name="submit" id="submit"/>
-		</form>
-		</body><html>'''
-		
-		return page
+		user = request.form['email']
+		pw = request.form['password']
+
+		if check_auth(request.form['email'], request.form['password']):
+			session['logged_in'] = True
+			return redirect(url_for('.secret'))
+	return render_template('index.html')
 
 
 @app.route("/")
 def index():
   return render_template("index.html")
+  
+
+@app.route('/session/write/<name>/')
+def write(name=None):
+	session ['name'] = name
+	return "Wrote %s into 'name' key of session" % name
+
+@app.route('/session/read/')
+def read():
+	try:
+		if(session['name']):
+			return str(session['name'])
+	except KeyError:
+		pass
+	return "No session variable set for 'name' key"
+
+@app.route('/session/remove/')
+def remove():
+	session.pop('name', None)
+	return "Removed key 'name' from session"
+  
+@app.route('/login/')
+@app.route('/login/<message>')
+def login (message=None):
+	if (message != None):
+		flash(message)
+	else:
+		flash(u'A default message')
+	return redirect(url_for('index'))
+
 
 @app.route('/gtr/')
 def gtr():

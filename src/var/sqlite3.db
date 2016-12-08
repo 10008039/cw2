@@ -1,0 +1,6 @@
+DROP TABLE if EXISTS names ;
+
+CREATE TABLE names (
+name text ,
+
+);
